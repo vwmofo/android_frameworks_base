@@ -5444,6 +5444,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
      */
     Intent createHomeDockIntent() {
         Intent intent = null;
+
         // What home does is based on the mode, not the dock state.  That
         // is, when in car mode you should be taken to car home regardless
         // of whether we are actually in a car dock.
@@ -5457,26 +5458,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             }
         }
 
-        if (intent == null) {
-            return null;
-        }
-
-        ActivityInfo ai = null;
-        ResolveInfo info = mContext.getPackageManager().resolveActivityAsUser(
-                intent,
-                PackageManager.MATCH_DEFAULT_ONLY,
-                UserHandle.USER_CURRENT);
-        if (info != null) {
-            ai = info.activityInfo;
-        }
-        if (ai != null
-                && ai.metaData != null
-                && ai.metaData.getBoolean(Intent.METADATA_DOCK_HOME)) {
-            intent = new Intent(intent);
-            intent.setClassName(ai.packageName, ai.name);
+        if (intent != null) {
             return intent;
-        }
-
+        } 
         return null;
     }
 
