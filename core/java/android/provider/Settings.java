@@ -2766,13 +2766,69 @@ public final class Settings {
         public static final String QUICK_TILES_TEXT_COLOR = "quick_tiles_text_color";
 
         /**
+         * Whether or not to use the app sidebar
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_ENABLED = "app_sidebar_enabled";
+
+        /**
+         * User defined transparency level for sidebar
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRANSPARENCY = "app_sidebar_transparency";
+
+        /**
+         * Disable text labels for app sidebar items
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_DISABLE_LABELS = "app_sidebar_disable_labels";
+
+        /**
+         * Position of app sidebar
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_POSITION = "app_sidebar_position";
+
+        /**
+         * Width of the appbar trigger
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRIGGER_WIDTH = "app_sidebar_trigger_width";
+
+        /**
+         * Position of appbar trigger
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRIGGER_TOP = "app_sidebar_trigger_top";
+
+        /**
+         * Height of the appbar trigger
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRIGGER_HEIGHT = "app_sidebar_trigger_height";
+
+        /**
+         * Whether to display the trigger region or not
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_SHOW_TRIGGER = "app_sidebar_show_trigger";
+
+        /**
          * Quick Settings Panel Tiles to Use
          *
          * @hide
          */
         public static final String QUICK_SETTINGS_TILES = "quick_settings_tiles";
 
-	/**
+        /**
          * number of tiles per row in quick settings
          *
          * @hide
@@ -2952,77 +3008,43 @@ public final class Settings {
         public static final String QS_FLOATING_WINDOW = "qs_floating_window";
 
         /**
-         * Use the Notification Power Widget? (Who wouldn't!)
+         * Quick Settings Quick access ribbon
          *
          * @hide
          */
-        public static final String EXPANDED_VIEW_WIDGET = "expanded_view_widget";
+        public static final String QS_QUICK_ACCESS = "qs_quick_access";
 
         /**
-         * Whether to hide the notification screen after clicking on a widget
-         * button
+         * Quick Settings Quick access ribbon - linked layout
          *
          * @hide
          */
-        public static final String EXPANDED_HIDE_ONCHANGE = "expanded_hide_onchange";
+        public static final String QS_QUICK_ACCESS_LINKED = "qs_quick_access_linked";
 
         /**
-         * Hide scroll bar in power widget
+         * Quick Settings Ribbon Tiles to Use
          *
          * @hide
          */
-        public static final String EXPANDED_HIDE_SCROLLBAR = "expanded_hide_scrollbar";
+        public static final String QUICK_SETTINGS_RIBBON_TILES = "quick_settings_ribbon_tiles";
 
         /**
-         * Haptic feedback in power widget
-         *
-         * @hide
-         */
-        public static final String EXPANDED_HAPTIC_FEEDBACK = "expanded_haptic_feedback";
-
-        /**
-         * Widget Buttons to Use
-         *
-         * @hide
-         */
-        public static final String WIDGET_BUTTONS = "expanded_widget_buttons";
-
-        /**
-         * Widget Buttons to Use - Tablet
-         *
-         * @hide
-         */
-        public static final String WIDGET_BUTTONS_TABLET = "expanded_widget_buttons_tablet";
-
-        /**
-        * Notification Power Widget - Custom Brightness Mode
-        * @hide
-        */
-        public static final String EXPANDED_BRIGHTNESS_MODE = "expanded_brightness_mode";
-
-        /**
-        * Notification Power Widget - Custom Network Mode
+        * Quick Settings - Custom Network Mode
         * @hide
         */
         public static final String EXPANDED_NETWORK_MODE = "expanded_network_mode";
 
         /**
-        * Notification Power Widget - Custom Screen Timeout
+        * Quick Settings - Custom Screen Timeout
         * @hide
         */
         public static final String EXPANDED_SCREENTIMEOUT_MODE = "expanded_screentimeout_mode";
 
         /**
-        * Notification Power Widget - Custom Ring Mode
+        * Quick Settings - Custom Ring Mode
         * @hide
         */
         public static final String EXPANDED_RING_MODE = "expanded_ring_mode";
-
-        /**
-        * Notification Power Widget - Custom Torch Mode
-        * @hide
-        */
-        public static final String EXPANDED_FLASH_MODE = "expanded_flash_mode";
 
         /**
         * AutoHide CombinedBar on tablets.
@@ -3944,6 +3966,18 @@ public final class Settings {
          * @hide
          */
         public static final String POWER_DIALOG_SHOW_NAVBAR_HIDE = "power_dialog_show_navbar_hide";
+
+        /**
+         *
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_WIDTH_PORT = "navigation_bar_width_port";
+
+        /**
+        *
+        * @hide
+        */
+        public static final String NAVIGATION_BAR_WIDTH_LAND = "navigation_bar_width_land";
 
         /**
          * Show the Reboot on lockscreen dialog in Power menu
