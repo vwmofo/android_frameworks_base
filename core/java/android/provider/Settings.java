@@ -3253,6 +3253,24 @@ public final class Settings {
         public static final String PIE_SEARCH = "pie_search";
 
         /**
+         * Pie last app, should default to 0 (no, show only when needed)
+         * @hide
+         */
+        public static final String PIE_LAST_APP = "pie_last_app";
+
+        /**
+         * Pie kill task, default to 0 (off)
+         * @hide
+         */
+        public static final String PIE_KILL_TASK = "pie_kill_task";
+
+        /**
+         * Pie app window, default to 0 (off)
+         * @hide
+         */
+        public static final String PIE_APP_WINDOW = "pie_app_window";
+
+        /**
          * Pie gap angle, should default to 2
          * @hide
          */
@@ -4728,6 +4746,18 @@ public final class Settings {
          * @hide
          */
         public static final String NOTIFICATIONS_BEHAVIOUR = "notifications_behaviour";
+
+        /**
+         * Give SMS Notifications a breathing effect
+         * @hide
+         */
+        public static final String SMS_BREATH = "pref_key_sms_breath";
+
+        /**
+         * Give MMS Notifications a breathing effect
+         * @hide
+         */
+        public static final String MISSED_CALL_BREATH = "missed_call_breath";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
