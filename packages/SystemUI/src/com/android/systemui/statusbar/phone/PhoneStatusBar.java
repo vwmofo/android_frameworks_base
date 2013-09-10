@@ -625,13 +625,6 @@ public class PhoneStatusBar extends BaseStatusBar {
         // set recents activity navigation bar view
         RecentsActivity.addNavigationCallback(mNavigationBarView);
 
-        if (mRecreating) {
-            if (mAppSidebar != null)
-                mWindowManager.removeView(mAppSidebar);
-        }
-        mAppSidebar = (AppSidebar)View.inflate(context, R.layout.app_sidebar, null);
-        mWindowManager.addView(mAppSidebar, getAppSidebarLayoutParams(mSidebarPosition));
-
         // figure out which pixel-format to use for the status bar.
         mPixelFormat = PixelFormat.TRANSLUCENT;
 
@@ -902,6 +895,8 @@ public class PhoneStatusBar extends BaseStatusBar {
             mQuickAccessLayoutLinked = Settings.System.getIntForUser(resolver,
                     Settings.System.QS_QUICK_ACCESS_LINKED, 1, UserHandle.USER_CURRENT) == 1;
             if (mHasQuickAccessSettings) {
+                cleanupRibbon();
+                mRibbonView = null;
                 inflateRibbon();
             }
         }
@@ -3237,7 +3232,7 @@ public class PhoneStatusBar extends BaseStatusBar {
                 try {
                     // position app sidebar on left if in landscape orientation and device has a navbar
                     if (mWindowManagerService.hasNavigationBar() &&
-                            config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                            config.orientation == Configuration.ORIENTATION_LANDSCAPE && (mCurrentUIMode == 0)) {
                         mWindowManager.updateViewLayout(mAppSidebar,
                                 getAppSidebarLayoutParams(AppSidebar.SIDEBAR_POSITION_LEFT));
                         mHandler.postDelayed(new Runnable() {
